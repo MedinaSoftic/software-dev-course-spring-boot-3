@@ -21,7 +21,7 @@ public class AlbumController {
     public List<Album> getAllItems() {
         return albumRepository.findAll();
     }
-    @GetMapping
+    @GetMapping("/{id}")
     public Optional<Album> getItem(@PathVariable int id) {
         return albumRepository.findById(id);
     }

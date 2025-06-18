@@ -20,7 +20,7 @@ public class BookController {
     public List<Book> getAllItems() {
         return bookRepository.findAll();
     }
-    @GetMapping
+    @GetMapping("/{id}")
     public Optional<Book> getItem(@PathVariable int id) {
         return bookRepository.findById(id);
     }

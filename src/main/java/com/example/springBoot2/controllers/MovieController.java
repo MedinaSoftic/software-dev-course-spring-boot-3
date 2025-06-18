@@ -21,7 +21,7 @@ public class MovieController {
     public List<Movie> getAllItems() {
         return movieRepository.findAll();
     }
-    @GetMapping
+    @GetMapping("/{id}")
     public Optional<Movie> getItem(@PathVariable int id) {
         return movieRepository.findById(id);
     }
